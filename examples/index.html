@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>marcopeg/ReactB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/css/bootstrap.min.css">
+
+    <!-- ReactJS from CDN -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/0.12.2/react-with-addons.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/0.12.2/JSXTransformer.js"></script>
+
+    <!-- ReactB (last build) -->
+    <script src="../build/reactb.js"></script>
+
+
+</head>
+<body>
+
+    <div id="demo"></div>
+
+    <script type="text/jsx">
+
+        // exports ReactB to the global namespace
+        // this is highly demo code. avoid eval in you apps!
+        Object.keys(reactb).forEach(function(item){eval(item+'=reactb.'+item)});
+
+        var App = React.createClass({
+            render() {
+                return (
+                    <Container>
+                        <PageHeader title="ReactB" subtitle=" - TwitterBootrap based UI library for ReactJS" />
+                        <Row colSize="4 8">
+                            <Col>
+                                <Title size="3">Col4</Title>
+                                <Well>-- this is a <i>well</i> box --</Well>
+                            </Col>
+                            <Col>
+                                <Title size="3" text="Col6" />
+                                <Button 
+                                    text="This is a button" 
+                                    role="primary"
+                                    icon="plus" 
+                                    iconPos="left" 
+                                    />
+                            </Col>
+                        </Row>
+                    </Container>
+                );
+            }
+        });        
+
+        React.render(
+            React.createElement(App),
+            document.getElementById('demo')
+        );
+    </script>
+</body>
+</html>
