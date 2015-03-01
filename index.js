@@ -4,19 +4,19 @@
  */
 
 module.exports = {
-    Container: require('./src/container'),
-    Row: require('./src/row'),
-    Col: require('./src/col'),
+    Container: require('./lib/container'),
+    Row: require('./lib/row'),
+    Col: require('./lib/col'),
 
-    Title: require('./src/title'),
-    Well: require('./src/well'),
-    Icon: require('./src/icon'),
-    Badge: require('./src/badge'),
-    Label: require('./src/label'),
+    Title: require('./lib/title'),
+    Well: require('./lib/well'),
+    Icon: require('./lib/icon'),
+    Badge: require('./lib/badge'),
+    Label: require('./lib/label'),
 
-    Button: require('./src/button'),
-    Input: require('./src/input'),
+    Button: require('./lib/button'),
+    Input: require('./lib/input'),
 
-    PageHeader: require('./src/page-header')
+    PageHeader: require('./lib/page-header')
 };
 
